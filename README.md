@@ -1,4 +1,4 @@
-# the_bluest_berries__leonh15_amandat109_jasonc573_nial24
+# Berriest Blues by The Bluest Berries
 
 ## Roster
 * Leon Huang
