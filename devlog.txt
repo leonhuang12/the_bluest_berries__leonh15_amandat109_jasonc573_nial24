@@ -11,3 +11,6 @@ leonH -- 2025-04-01 08:46
 jasonC -- 2025-04-01 11:45
  - Created required files in app/
  - Added baseline programs for MongoDB and Flask in __init__.py
+
+leonH -- 2025-04-01 11:45
+ - Added app summary in README 
