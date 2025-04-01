@@ -1,3 +1,10 @@
+leonH, amandaT, jasonC, niaL -- 2025-03-27 00:16
+- Drafted design doc
+
+leonH, amandaT, jasonC, niaL -- 2025-03-31 20:43
+- Revised design doc
+
 leonH -- 2025-04-01 08:46
  - Assigned Flask duties
  - Extended dataset utilizations
+
