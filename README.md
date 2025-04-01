@@ -6,8 +6,8 @@
 * Jason Chao
 * Nia Lam
 
-## App Description
-
+## App Description/Summary
+Our aim is to create a website that can visually demonstrate and display correlations between student performance and various factors based on our dataset. Specifically, users may look at attendance, study hours, sleep hours, and tutoring data per student. In order to visualize the data, we will utilize Chart.js to allow the user to generate graphs and charts. 
 
 # Install Guide
 
