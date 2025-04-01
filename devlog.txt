@@ -5,9 +5,9 @@ leonH, amandaT, jasonC, niaL -- 2025-03-31 20:43
 - Revised design doc
 
 leonH -- 2025-04-01 08:46
- - Assigned Flask duties
- - Extended dataset utilizations
+ - Assigned Flask duties in design doc
+ - Extended dataset utilizations in design doc
 
-jasonC -- 2025-04-01 11:47
+jasonC -- 2025-04-01 11:45
  - Created required files in app/
  - Added baseline programs for MongoDB and Flask in __init__.py
