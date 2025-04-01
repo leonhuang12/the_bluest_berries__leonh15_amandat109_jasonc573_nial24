@@ -8,3 +8,6 @@ leonH -- 2025-04-01 08:46
  - Assigned Flask duties
  - Extended dataset utilizations
 
+jasonC -- 2025-04-01 11:47
+ - Created required files in app/
+ - Added baseline programs for MongoDB and Flask in __init__.py
