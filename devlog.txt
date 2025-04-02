@@ -21,7 +21,11 @@ jasonC -- 2025-04-01 11:45
  - Added baseline programs for MongoDB and Flask in __init__.py
 
 leonH -- 2025-04-01 11:45
- - Added app summary in README 
+ - Added app summary in README
 
 leonH -- 2025-04-02 11:17
 - updated flag type from .png to .jpg
+
+jasonC -- 2025-04-02 11:28
+ - Added requirements.txt
+ - Added login route to __init__.py

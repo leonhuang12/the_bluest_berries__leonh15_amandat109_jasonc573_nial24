@@ -12,6 +12,7 @@ import pymongo
 # MONGODB INITIALIZATION
 client = pymongo.MongoClient("mongodb://localhost:27017/")
 db = client["database"]
+user_collection = db["users"]
 # print(client.list_database_names()) # printing all databases in system
 
 # FLASK APP INITIALIZATION
@@ -20,6 +21,10 @@ app = Flask(__name__)
 @app.route('/')
 def home():
     return "hello"
+
+@app.route('/login')
+def login():
+    return "login page"
 
 if __name__ == "__main__":
     app.debug = True
