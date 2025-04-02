@@ -2,11 +2,19 @@ leonH, amandaT, jasonC, niaL -- 2025-03-27 00:16
 - Drafted design doc
 
 leonH, amandaT, jasonC, niaL -- 2025-03-31 20:43
-- Revised design doc
-
-leonH -- 2025-04-01 08:46
- - Assigned Flask duties in design doc
- - Extended dataset utilizations in design doc
+- Revised design doc:
+  - Naming Convention: updated Project name to match that of README on Repo
+  - Database Organization:
+    - included _id field for devo awareness (we are aware it exists)
+    - added fields to "student_data" table:
+      - previous_scores
+      - tutoring_sessions
+      - physical_activity
+      - gender (only String field)
+    - updated table to match (tables do not include mandatory/automatic _id field)
+  - added note at the bottom of the doc to claify that two devos ARE in fact collaborating on the Mongo journey TOGETHER
+  - updated Task Breakdown:
+    - assigned Flask task to both PMLH and DNL
 
 jasonC -- 2025-04-01 11:45
  - Created required files in app/
@@ -14,3 +22,6 @@ jasonC -- 2025-04-01 11:45
 
 leonH -- 2025-04-01 11:45
  - Added app summary in README 
+
+leonH -- 2025-04-02 11:17
+- updated flag type from .png to .jpg
