@@ -12,7 +12,7 @@ import pymongo
 uri = "mongodb+srv://amandat109:NUcnFGlhEO1TdOaQ@blueberry.pjtpwgq.mongodb.net/?retryWrites=true&w=majority&appName=Blueberry"
 
 # MONGODB INITIALIZATION
-client = pymongo.MongoClient(uri, server_api=ServerApi('1'))
+# client = pymongo.MongoClient(uri, server_api=ServerApi('1'))
 #client = pymongo.MongoClient("mongodb://localhost:27017/")
 db = client["database"]
 user_collection = db["users"]

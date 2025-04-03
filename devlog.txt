@@ -30,11 +30,10 @@ jasonC -- 2025-04-02 11:28
  - Added requirements.txt
  - Added login route to __init__.py
 
-niaL-- 2025-04-02 9:02
+niaL -- 2025-04-03 8:02
  - Added index routing to __init__.py
  - Created static and templates file structure
- - Added HTML templates for index.html and login.html
- - 
+ - Wrote HTML templates for index.html and login.html
 
 leonH, amandaT, jasonC, niaL -- 2025-04-03 11:42
 - uploaded raw dataset into app/

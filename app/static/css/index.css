@@ -1,0 +1,12 @@
+nav.navbar{
+    padding: 20px;
+    color: rgb(218, 229, 245);
+    font-size:large;
+}
+
+body{
+    background-color: rgb(43, 118, 227);
+    font-family: monospace;
+    color: rgb(218, 229, 245);
+    text-align: center;
+}
