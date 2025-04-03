@@ -35,3 +35,10 @@ niaL-- 2025-04-02 9:02
  - Created static and templates file structure
  - Added HTML templates for index.html and login.html
  - 
+
+leonH, amandaT, jasonC, niaL -- 2025-04-03 11:42
+- uploaded raw dataset into app/
+- created connection to mongodb?
+  - testing inconclusive
+- updated HMTL pages' code, contents, and styling
+- working on connecting Flask app with NGINX
