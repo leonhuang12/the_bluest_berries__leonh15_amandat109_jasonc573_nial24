@@ -20,11 +20,23 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return "hello"
+    # if 'username' not in session:
+    #     return redirect('/login')
+    # if request.method == 'POST':
+    # return "hello"
+    return render_template('index.html')
 
 @app.route('/login')
 def login():
     return "login page"
+    # if request.method == 'POST':
+    #     if request.form.get('register'):
+    #         return register_user()
+    #     if request.form.get('login'):
+    #         return login_user()
+    #     else:
+    #         flash('form error')
+    # return render_template('login.html')
 
 if __name__ == "__main__":
     app.debug = True
