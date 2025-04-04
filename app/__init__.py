@@ -10,10 +10,10 @@ from flask import Flask, flash, render_template, request, redirect, url_for, ses
 import pymongo
 
 # MONGODB INITIALIZATION
-connection = "mongodb+srv://amandat109:NUcnFGlhEO1TdOaQ@blueberry.pjtpwgq.mongodb.net/?retryWrites=true&w=majority&appName=Blueberry"
+connection = 'mongodb+srv://amandat109:NUcnFGlhEO1TdOaQ@blueberry.pjtpwgq.mongodb.net/?retryWrites=true&w=majority&appName=Blueberry'
 client = pymongo.MongoClient(connection)
-db = client["database"]
-user_collection = db["users"]
+db = client['database']
+user_collection = db['users']
 # print(client.list_database_names()) # printing all databases in system
 
 # FLASK APP INITIALIZATION
@@ -29,7 +29,6 @@ def home():
 
 @app.route('/login')
 def login():
-    return "login page"
     # if request.method == 'POST':
     #     if request.form.get('register'):
     #         return register_user()
@@ -37,8 +36,13 @@ def login():
     #         return login_user()
     #     else:
     #         flash('form error')
-    # return render_template('login.html')
+    # user_dict = {
+    #     'username': '',
+    #     'password': '',
+    # }
+    # insert_user_data = user_collection.insert_one(user_dict)
+    return render_template('login.html')
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     app.debug = True
-    app.run()
+    app.run(host='0.0.0.0')
