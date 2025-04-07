@@ -47,3 +47,13 @@ amandaT -- 2025-04-04 8:45
   - underneath site map area, redistributed login and non-login accessibility
     - visitors no longer automatically redirected from / to /login if not logged in
     - non-logged-in users can see two graphs to preview site: attendance-score and sleep_hours-score
+
+leonH -- 2025-04-07 02:00
+- updated subdomain name and created connection
+
+leonH, amandaT, jasonC, niaL -- 2025-04-07 11:45
+- successes: installing chart.js
+  - to be applied
+- many issues:
+  - HTML/CSS: flexing the navbar
+  - MongoDB: connecting project to server
