@@ -24,7 +24,7 @@ leonH -- 2025-04-01 11:45
  - Added app summary in README
 
 leonH -- 2025-04-02 11:17
-- updated flag type from .png to .jpg
+- Updated flag type from .png to .jpg
 
 jasonC -- 2025-04-02 11:28
  - Added requirements.txt
@@ -36,28 +36,29 @@ niaL -- 2025-04-03 8:02
  - Wrote HTML templates for index.html and login.html
 
 leonH, amandaT, jasonC, niaL -- 2025-04-03 11:42
-- uploaded raw dataset into app/
-- created connection to mongodb?
-  - testing inconclusive
-- updated HMTL pages' code, contents, and styling
-- working on connecting Flask app with NGINX
+- Uploaded raw dataset into app/
+- Created connection to mongodb?
+  - Testing inconclusive
+- Updated HMTL pages' code, contents, and styling
+- Working on connecting Flask app with NGINX
 
 amandaT -- 2025-04-04 8:45
-- updated design doc
-  - underneath site map area, redistributed login and non-login accessibility
-    - visitors no longer automatically redirected from / to /login if not logged in
-    - non-logged-in users can see two graphs to preview site: attendance-score and sleep_hours-score
+- Updated design doc
+  - Underneath site map area, redistributed login and non-login accessibility
+    - Visitors no longer automatically redirected from / to /login if not logged in
+    - Non-logged-in users can see two graphs to preview site: attendance-score and sleep_hours-score
 
 leonH -- 2025-04-07 02:00
-- updated subdomain name and created connection
+- Updated subdomain name and created connection
 
 leonH, amandaT, jasonC, niaL -- 2025-04-07 11:45
-- successes: installing chart.js
-  - to be applied
-- many issues:
+- Successes: installing chart.js
+  - To be applied
+- Many issues:
   - HTML/CSS: flexing the navbar
   - MongoDB: connecting project to server
 
-jasonC -- 2025-04-08 11:40
-- successfully established a connection to the MongoDB Atlas server
-- successfully executed code to add a dictionary to a collection, which will be implemented in our project
+jasonC, leonH -- 2025-04-08 11:40
+- Successfully established a connection to the MongoDB Atlas server
+- Successfully executed code to add a dictionary to a collection, which will be implemented in our project
+- Experimented with some of Chart.js's basic features on separate files.
