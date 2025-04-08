@@ -57,3 +57,7 @@ leonH, amandaT, jasonC, niaL -- 2025-04-07 11:45
 - many issues:
   - HTML/CSS: flexing the navbar
   - MongoDB: connecting project to server
+
+jasonC -- 2025-04-08 11:40
+- successfully established a connection to the MongoDB Atlas server
+- successfully executed code to add a dictionary to a collection, which will be implemented in our project
