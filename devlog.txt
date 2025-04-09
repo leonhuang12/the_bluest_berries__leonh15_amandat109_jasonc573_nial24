@@ -62,3 +62,16 @@ jasonC, leonH -- 2025-04-08 11:40
 - Successfully established a connection to the MongoDB Atlas server
 - Successfully executed code to add a dictionary to a collection, which will be implemented in our project
 - Experimented with some of Chart.js's basic features on separate files.
+
+leonH, amandaT, jasonC, niaL -- 2025-04-09 11:45
+- QAF confirmations
+  - Confirmed billing of MongoDB is at $0 (no charges for devos here)
+- Progress on MongoDB
+  - transferred data from csv file to MongoDB successfully
+  - reordering of items within a document in progress
+- HTML
+  - successfully flexed the navbar (horizontally aligns items rather than vertical items)
+  - removed bullet styling on navbar list items
+  - DJC suggested on-page styling of navbar items (to indicate the page the user is on)
+- Chart.js
+  - experimentation in progress
