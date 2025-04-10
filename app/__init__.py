@@ -8,13 +8,17 @@ Time Spent: [INSERT TIME HERE]
 
 from flask import Flask, flash, render_template, request, redirect, url_for, session, flash
 import pymongo
+import csv
 
 # MONGODB INITIALIZATION
-connection = 'mongodb+srv://amandat109:NUcnFGlhEO1TdOaQ@blueberry.pjtpwgq.mongodb.net/?retryWrites=true&w=majority&appName=Blueberry'
-client = pymongo.MongoClient(connection)
-db = client['database']
-user_collection = db['users']
-# print(client.list_database_names()) # printing all databases in system
+# from pymongo.mongo_client import MongoClient
+# from pymongo.server_api import ServerApi
+# uri = "mongodb+srv://jasonc573:Dragonace2010@blueberry.pjtpwgq.mongodb.net/?appName=Blueberry"
+# # Create a new client and connect to the server
+# client = MongoClient(uri, server_api=ServerApi('1'))
+# db = client['database']
+# user_collection = db['users']
+# student_data_collection = db['student_data']
 
 # FLASK APP INITIALIZATION
 app = Flask(__name__)
@@ -29,18 +33,11 @@ def home():
 
 @app.route('/login')
 def login():
-    # if request.method == 'POST':
-    #     if request.form.get('register'):
-    #         return register_user()
-    #     if request.form.get('login'):
-    #         return login_user()
-    #     else:
-    #         flash('form error')
-    # user_dict = {
-    #     'username': '',
-    #     'password': '',
-    # }
-    # insert_user_data = user_collection.insert_one(user_dict)
+    if request.method == 'POST':
+        # RETRIEVE USER AND PASS FROM LOGIN FORM
+        db.insert_user_data(user, pass)
+        else:
+            flash('form error')
     return render_template('login.html')
 
 if __name__ == '__main__':
