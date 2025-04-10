@@ -75,3 +75,26 @@ leonH, amandaT, jasonC, niaL -- 2025-04-09 11:45
   - DJC suggested on-page styling of navbar items (to indicate the page the user is on)
 - Chart.js
   - experimentation in progress
+
+
+DESIGN REVISIONS THUS FAR:
+------------------------------------
+====================================
+- Title
+  - updated Project name to match that of README on Repo
+- Database Organization:
+  - included _id field for devo awareness (we are aware it exists)
+  - added fields to "student_data" table:
+    - previous_scores
+    - tutoring_sessions
+    - physical_activity      
+    - gender (only String field)
+  - updated table to match (tables do not include mandatory/automatic _id field)
+- Site Map
+  - redistributed login and non-login accessibility
+    - Visitors no longer automatically redirected from / to /login if not logged in
+    - Non-logged-in users can see two graphs to preview site: attendance-score and sleep_hours-score
+- Task Breakdown:
+  - assigned Flask task to both PMLH and DNL
+- Bonus
+  - added note at the bottom of the doc to claify that two devos ARE in fact collaborating on the Mongo journey TOGETHER
