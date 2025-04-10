@@ -76,6 +76,9 @@ leonH, amandaT, jasonC, niaL -- 2025-04-09 11:45
 - Chart.js
   - experimentation in progress
 
+leonH, amandaT, jasonC, niaL -- 2025-04-10 11:45
+- delegation of task: bcrypt to DJC
+
 
 DESIGN REVISIONS THUS FAR:
 ------------------------------------
