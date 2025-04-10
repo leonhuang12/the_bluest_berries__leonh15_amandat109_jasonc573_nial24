@@ -76,8 +76,11 @@ leonH, amandaT, jasonC, niaL -- 2025-04-09 11:45
 - Chart.js
   - experimentation in progress
 
+niaL -- 2025-04-10 07:55
+- Fixed component map arrows
+
 leonH, amandaT, jasonC, niaL -- 2025-04-10 11:45
-- delegation of task: bcrypt to DJC
+- Delegation of task: bcrypt to DJC
 
 
 DESIGN REVISIONS THUS FAR:
@@ -85,6 +88,8 @@ DESIGN REVISIONS THUS FAR:
 ====================================
 - Title
   - updated Project name to match that of README on Repo
+- Component Map:
+  - Corrected arrows
 - Database Organization:
   - included _id field for devo awareness (we are aware it exists)
   - added fields to "student_data" table:
