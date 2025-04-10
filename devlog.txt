@@ -84,6 +84,10 @@ leonH, amandaT, jasonC, niaL -- 2025-04-10 11:40
 - MongoDB
   - Deleted student data before reordering items within documents
   - Started mongo connection for user login
+- HTML
+  - Rearranged CSS file structure, condensing into one style.css file, which is universal
+  - Increased readability of home page
+  - New challenge: rounding out forms
 
 
 DESIGN REVISIONS THUS FAR:
