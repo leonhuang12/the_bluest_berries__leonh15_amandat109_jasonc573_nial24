@@ -1,5 +1,14 @@
+'''
+Bluest Berries: Leon Huang, Amanda Tan, Jason Chao, Nia Lam
+SoftDev
+P04: Makers Makin' It, Act II -- The Seequel
+2025-04-21
+Time Spent: [INSERT TIME HERE]
+'''
+
 import pymongo
 import csv
+import bcrypt
 
 from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
@@ -38,12 +47,18 @@ def insert_student_data():
 
 def insert_user_data(username, password):
     # use bcrypt as a password hasher
+    salt = bcrypt.gensalt()
+    hash = bcrypt.hashpw(password.encode('utf-8'), salt)
+
     user_dict = {
         'username': username,
-        'password': password
-        #'password_hash': hash
+        'password': password,
+        'password_hash': hash
     }
     data_insertion = user_collection.insert_one(user_dict)
+
+# def verify_user_login(inputted_username, inputted_password):
+#
 
 def clear_collection(collection_name):
     document_deletion = collection_name.delete_many({})
@@ -57,3 +72,7 @@ def clear_collection(collection_name):
 # user_insertion = user_collection.insert_one(user_dict)
 # print(user_insertion.inserted_id)
 # print(user_collection.find_one())
+
+insert_user_data('jason', 'chao')
+for user_document in user_collection.find({'username': 'jason'}, {'username': 0, 'password': 1, 'password_hash': 1}):
+    print(user_document)

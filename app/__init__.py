@@ -2,7 +2,7 @@
 Bluest Berries: Leon Huang, Amanda Tan, Jason Chao, Nia Lam
 SoftDev
 P04: Makers Makin' It, Act II -- The Seequel
-2025-04-[INSERT DAY HERE]
+2025-04-21
 Time Spent: [INSERT TIME HERE]
 '''
 
