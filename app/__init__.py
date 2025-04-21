@@ -25,20 +25,18 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    # if 'username' not in session:
-    #     return redirect('/login')
-    # if request.method == 'POST':
-    # return "hello"
+    if 'username' not in session:
+        return redirect('/login')
     return render_template('index.html')
 
 @app.route('/login')
 def login():
-    if request.method == 'POST':
         # RETRIEVE USER AND PASS FROM LOGIN FORM
         db.insert_user_data(user, pass)
         else:
             flash('form error')
     return render_template('login.html')
+
 
 if __name__ == '__main__':
     app.debug = True

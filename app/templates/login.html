@@ -20,7 +20,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
     <!-- css -->
-    <link rel="stylesheet" href="/static/css/login.css">
+    <link rel="stylesheet" href="/static/css/style.css">
   </head>
 
   <body>
@@ -28,7 +28,8 @@
     <div class="container-fluid">
       <nav class="navbar">
       <ul class="nav">
-        <li class="nav-item"> <a class="nav-link" href="{{ url_for('home') }}"> Home </a> </li>
+        <li class="nav-item"> <a class="nav-link" href="{{ url_for('home') }}"> Home</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="{{ url_for('login') }}"> Log In </a> </li>
       </ul>
       </nav>
     </div>
@@ -37,7 +38,7 @@
     <!-- header/info -->
     <div class="container">
       <h1> The Berriest Blues </h1>
-      <h6> <i> by The Bluest Berries </i> </h6>
+      <h5> <i> by The Bluest Berries </i> </h5>
     </div>
     <!------>
 
@@ -59,7 +60,8 @@
 
     <!-- Login and registration forms -->
     <div class="horizontal-flex">
-      <div>
+
+      <div class="login-forms">
         <h4> Log In </h4>
         <form action="/login" method="POST">
           <input type="text" name="username" placeholder="Username"><br><br>
@@ -68,8 +70,8 @@
         </form>
       </div>
 
-      <div>
-      <h4> Sign Up </h4>
+      <div class="login-forms">
+        <h4> Sign Up </h4>
         <form action="/login" method="POST">
             <input type="text" name="username" placeholder="Username"><br><br>
             <input type="password" name="password" placeholder="Password"><br><br>
@@ -77,6 +79,7 @@
             <input type="submit" name="register" value="Register">
         </form>
       </div>
+
     </div>
     <!--  -->
 

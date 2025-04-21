@@ -1,0 +1,67 @@
+form{
+  border-radius: 0px;
+}
+
+div.login-forms{
+  margin-bottom: 80px;
+}
+
+div.container{
+  padding: 20px;
+}
+
+div.card{
+  margin-right: 15%;
+  margin-left: 15%;
+}
+
+h1 {
+  font-size: 32px;
+}
+
+h5 {
+  font-size: 12px;
+}
+
+p {
+  font-size: 15px;
+}
+
+nav.navbar{
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: rgb(14, 44, 87);
+  color: white;
+  font-size: 15px;
+  display: flex;
+}
+
+li.nav-item{
+  padding-right: 20px;
+  display: inline;
+  list-style-type: none;
+}
+
+li a:link {
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+}
+
+li a:visited {
+  padding: 10px;
+  color: white;
+}
+
+li a:hover {
+  padding: 10px;
+  background-color: rgb(12, 55, 117);
+}
+
+body{
+  margin: 0px;
+  background-color: rgb(20, 86, 181);
+  font-family: monospace;
+  color: white;
+  text-align: center;
+}

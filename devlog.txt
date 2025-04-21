@@ -90,6 +90,20 @@ leonH, amandaT, jasonC, niaL -- 2025-04-10 11:40
   - New challenge: rounding out forms
 
 
+
+HOME STRETCH CHECKLIST:
+------------------------------------
+* HTML - login form, buttons :: DNL
+* Chart.js - determine if visualization library can fulfill needs :: PMLH, DAT
+* bcrypt :: DJC
+* record video :: ALL
+Bonus
+* eat supper :: DJC
+* bring zen vibes :: PMLH
+====================================
+
+
+
 DESIGN REVISIONS THUS FAR:
 ------------------------------------
 ====================================
