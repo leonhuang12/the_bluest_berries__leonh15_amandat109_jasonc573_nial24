@@ -31,15 +31,10 @@ def home():
 
 @app.route('/login')
 def login():
-    # if request.method == 'POST':
-    #     if request.form.get('register'):
-    #         return register_user()
-    #     if request.form.get('login'):
-    #         return login_user()
-    #     # RETRIEVE USER AND PASS FROM LOGIN FORM
-    #     db.insert_user_data(user, pass)
-    #     else:
-    #         flash('form error')
+        # RETRIEVE USER AND PASS FROM LOGIN FORM
+        db.insert_user_data(user, pass)
+        else:
+            flash('form error')
     return render_template('login.html')
 
 
