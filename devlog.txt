@@ -89,6 +89,10 @@ leonH, amandaT, jasonC, niaL -- 2025-04-10 11:40
   - Increased readability of home page
   - New challenge: rounding out forms
 
+leonH, amandaT, jasonC, niaL -- 2025-04-22 11:56
+- student data retrieval function created
+- login error fixed
+- registration WIP
 
 
 HOME STRETCH CHECKLIST:
