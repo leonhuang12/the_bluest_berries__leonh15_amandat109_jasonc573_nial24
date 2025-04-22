@@ -45,9 +45,13 @@ def insert_student_data():
                 'score': row[19]
             }
             data_insertion = student_data_collection.insert_one(student_data_dict)
-            
-# def retrieve_student_data(data_type):
-#     data_retrieval = student_data_collection.find({}, {data_type: 1})
+
+def retrieve_student_data(data_type):
+    data_list = []
+    for data in student_data_collection.find({}, {"_id": 0, data_type: 1}):
+        data_list.append(int(data[data_type]))
+    # print(data_list)
+    return data_list
 
 def insert_user_data(username, password):
     # use bcrypt as a password hasher
@@ -66,7 +70,7 @@ def verify_user_login(inputted_username, inputted_password):
     for user_document in user_collection.find({'username': inputted_username}, {'_id': 0, 'username': 0}):
         salt = user_document['salt']
         password_hash = user_document['password_hash']
-        
+
         inputted_password_hash = bcrypt.hashpw(inputted_password.encode('utf-8'), salt)
         if password_hash == inputted_password_hash:
             print(f'Login successful for {inputted_username}!')
@@ -87,6 +91,5 @@ def clear_collection(collection_name):
 
 
 # insert_user_data('jason', 'chao')
-
-verify_user_login('jason', 'chao')
-
+# verify_user_login('jason', 'chao')
+# retrieve_student_data('study_hours')
