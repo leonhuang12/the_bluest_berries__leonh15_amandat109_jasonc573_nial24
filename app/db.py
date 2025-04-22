@@ -45,6 +45,9 @@ def insert_student_data():
                 'score': row[19]
             }
             data_insertion = student_data_collection.insert_one(student_data_dict)
+            
+# def retrieve_student_data(data_type):
+#     data_retrieval = student_data_collection.find({}, {data_type: 1})
 
 def insert_user_data(username, password):
     # use bcrypt as a password hasher
