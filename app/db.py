@@ -13,6 +13,7 @@ import bcrypt
 from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
 uri = "mongodb+srv://jasonc573:Dragonace2010@blueberry.pjtpwgq.mongodb.net/?appName=Blueberry"
+
 # Create a new client and connect to the server
 client = MongoClient(uri, server_api=ServerApi('1'))
 
@@ -52,27 +53,37 @@ def insert_user_data(username, password):
 
     user_dict = {
         'username': username,
-        'password': password,
+        # 'password': password, # plaintext password is NOT stored, only its salt and hash
+        'salt': salt,
         'password_hash': hash
     }
     data_insertion = user_collection.insert_one(user_dict)
 
-# def verify_user_login(inputted_username, inputted_password):
-#
+def verify_user_login(inputted_username, inputted_password):
+    for user_document in user_collection.find({'username': inputted_username}, {'_id': 0, 'username': 0}):
+        salt = user_document['salt']
+        password_hash = user_document['password_hash']
+        
+        inputted_password_hash = bcrypt.hashpw(inputted_password.encode('utf-8'), salt)
+        if password_hash == inputted_password_hash:
+            print(f'Login successful for {inputted_username}!')
+            return True
+        else:
+            print('Incorrect password.')
+            return False
+    print('Username not found.')
+    return False
 
 def clear_collection(collection_name):
     document_deletion = collection_name.delete_many({})
     print(f'{document_deletion.deleted_count} documents deleted from {collection_name}.')
 
-# user_dict = {
-#     "username": "jason",
-#     "password": "chao"
-# }
-#
-# user_insertion = user_collection.insert_one(user_dict)
-# print(user_insertion.inserted_id)
-# print(user_collection.find_one())
+### CLEAR COLLECTIONS -- USE WITH CAUTION ###
+# clear_collection(student_data_collection)
+# clear_collection(user_collection)
 
-insert_user_data('jason', 'chao')
-for user_document in user_collection.find({'username': 'jason'}, {'username': 0, 'password': 1, 'password_hash': 1}):
-    print(user_document)
+
+# insert_user_data('jason', 'chao')
+
+verify_user_login('jason', 'chao')
+

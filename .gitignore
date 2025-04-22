@@ -2,6 +2,7 @@ __pycache__/
 app/__pycache__/
 app/wsgi.py
 .env
+.venv
 sites-enabled
 tbb.ini
 wsgi.py
