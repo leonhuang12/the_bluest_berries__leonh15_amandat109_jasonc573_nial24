@@ -95,3 +95,17 @@ $ cd PATH/TO/the_bluest_berries__leonh15_amandat109_jasonc573_nial24/
 ```    
 * Running on http://127.0.0.1:5000
 ``` 
+
+
+### FEATURE SPOTLIGHT
+- HTML indication current page
+- Theme consistency with blue site, and round buttons mathcing the blue berries theme
+- Viewablility: wide chart and for easy viewing
+- Security: bcrypt for safe passwords
+- Topic Relevancy: grades for stuy students
+
+### KNOWN BUGS/ISSUES
+- Droplet hosting: Internal Server Error
+- Inaccessible to non registered users
+- Unutilized database field (non integer, not relevant)
+- Database Connectivity: Mongodb approving IP addresses before permissing connections
