@@ -130,6 +130,17 @@ amandaT -- 2025-04-23 00:30
 - HMTL / browser continuity
   - got rid of white background and border for p tags on firefox
 
+amandaT -- 2025-04-23 01:30
+- updated design doc (v4)
+  - added ship date
+  - removed gender factor from database organization
+  - updated site map
+    - no functionality for non-logged in users
+    - two featured graphs: attendance and sleep
+    - customizable graph with remaining factors as 3rd graph
+      - score only shows up on y-axis
+  - include bcrypt under /login
+
 HOME STRETCH CHECKLIST:
 ------------------------------------
 * HTML - login form, buttons :: DNL
