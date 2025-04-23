@@ -107,7 +107,13 @@
                 display: true,
                 text: 'Student Performance: Attendance vs Score',
                 color: '#ffffff' 
+              },
+              legend: {
+                labels: {
+                  color: '#ffffff'
+                }
               }
+
             },
             scales: {
               x: {
@@ -115,14 +121,20 @@
                   display: true,
                   text: 'Attendance',
                   color: '#ffffff' 
-                }
+                },
+                ticks: {
+                  color: '#ffffff' // white x-axis numbers
+                },
               },
               y: {
                 title: {
                   display: true,
                   text: 'Score',
                   color: '#ffffff' 
-                }
+                },
+                ticks: {
+                  color: '#ffffff' // white x-axis numbers
+                },
               }
             }
           }
@@ -153,6 +165,11 @@
                 display: true,
                 text: 'Student Performance: Sleep Hours vs Score',
                 color: '#ffffff' 
+              },
+              legend: {
+                labels: {
+                  color: '#ffffff'
+                }
               }
             },
             scales: {
@@ -250,14 +267,20 @@
                   display: true,
                   text: xField.replace("_", " "),
                   color: '#ffffff' 
-                }
+                },
+                ticks: {
+                  color: '#ffffff' // white x-axis numbers
+                },
               },
               y: {
                 title: {
                   display: true,
                   text: yField.replace("_", " "),
                   color: '#ffffff' 
-                }
+                },
+                ticks: {
+                  color: '#ffffff' // white x-axis numbers
+                },
               }
             }
           }
