@@ -89,18 +89,38 @@ leonH, amandaT, jasonC, niaL -- 2025-04-10 11:40
   - Increased readability of home page
   - New challenge: rounding out forms
 
+leonH, amandaT, jasonC, niaL -- 2025-04-21 11:46
+- new functionality: bcrypt
+  - confirmed usage
+  - started implementation
+- redelegation of js
+- established filming plans
+
+jasonC -- 2025-04-21 23:23
+- finished bcrypt
+  - wrote verifiation function
+- started data retrival function
+
+niaL -- 2025-04-22 01:14
+- HTML updates
+  - started connecting to mongodb
+
 leonH, amandaT, jasonC, niaL -- 2025-04-22 11:56
-- Student data retrieval function created
+- Student data retrieval function finished
 - Login error fixed
 - Registration error WIP
 
-niaL -- 2025-04-22 21:32
+niaL -- 2025-04-22 20:32
 - Registration error fixed
 - SSL error resolved, IP address added
 - Added page indicator styling
 - Added form and button styling
 - Cleaned up code
 
+amandaT -- 2025-04-22 20:37
+- requirements.txt up to date
+  - major additions include: pymongo, bcrypt
+- fixed devlog dating errors
 
 HOME STRETCH CHECKLIST:
 ------------------------------------
