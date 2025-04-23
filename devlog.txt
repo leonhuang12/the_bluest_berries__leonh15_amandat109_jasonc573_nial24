@@ -90,9 +90,16 @@ leonH, amandaT, jasonC, niaL -- 2025-04-10 11:40
   - New challenge: rounding out forms
 
 leonH, amandaT, jasonC, niaL -- 2025-04-22 11:56
-- student data retrieval function created
-- login error fixed
-- registration WIP
+- Student data retrieval function created
+- Login error fixed
+- Registration error WIP
+
+niaL -- 2025-04-22 21:32
+- Registration error fixed
+- SSL error resolved, IP address added
+- Added page indicator styling
+- Added form and button styling
+- Cleaned up code
 
 
 HOME STRETCH CHECKLIST:

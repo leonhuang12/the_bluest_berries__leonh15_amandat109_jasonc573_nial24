@@ -10,6 +10,7 @@ from flask import Flask, flash, render_template, request, redirect, url_for, ses
 from db import *
 import pymongo
 import csv
+import os
 
 # MONGODB INITIALIZATION
 # from pymongo.mongo_client import MongoClient
@@ -23,6 +24,7 @@ import csv
 
 # FLASK APP INITIALIZATION
 app = Flask(__name__)
+app.secret_key = os.urandom(32)
 
 @app.route('/')
 def home():
@@ -36,7 +38,6 @@ def login():
     if request.method == 'POST':
         username = request.form.get('username')
         password = request.form.get('password')
-        print(f"log me in plss: {username}, {password}")
         
         if 'login' in request.form:
             user = user_collection.find_one({'username': username})
@@ -49,7 +50,6 @@ def login():
 
         elif 'register' in request.form:
             confirm_pass = request.form.get('confirm_pass')
-            print(f"reg: {username}, {password}, {confirm_pass}")
 
             if password != confirm_pass:
                 flash('Passwords do not match.')
@@ -59,7 +59,6 @@ def login():
                     flash('Username already exists.')
                 else:
                     insert_user_data(username, password)
-                    print(f"new user: {username}")
                     flash('Registration successful.')
 
     return render_template('login.html')

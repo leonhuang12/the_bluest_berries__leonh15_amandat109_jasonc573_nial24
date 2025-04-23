@@ -63,6 +63,32 @@ nav ul li a.active {
   background-color: rgb(12, 55, 117);
 }
 
+.login-forms h4 {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.login-forms input[type="text"],
+.login-forms input[type="password"] {
+  padding: 10px;
+  margin: 3px;
+  border-radius: 8px;
+  border: 1px solid rgb(12, 55, 117);
+  font-family: monospace;
+}
+
+input[type="submit"] {
+  margin-top: 5px;
+  border: none;
+  border-radius: 20px;
+  padding: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: rgb(14, 44, 87);
+  font-family: monospace;
+  color: white;
+}
+
 body{
   margin: 0px;
   background-color: rgb(20, 86, 181);
