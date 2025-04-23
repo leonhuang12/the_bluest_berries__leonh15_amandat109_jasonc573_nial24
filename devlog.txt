@@ -141,6 +141,8 @@ amandaT -- 2025-04-23 01:30
       - score only shows up on y-axis
   - include bcrypt under /login
 
+
+
 HOME STRETCH CHECKLIST:
 ------------------------------------
 * HTML - login form, buttons :: DNL
