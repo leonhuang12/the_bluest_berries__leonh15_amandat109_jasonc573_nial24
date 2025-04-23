@@ -126,6 +126,10 @@ leonH -- 2025-04-22 23:25
 - Added attendance vs score and sleep vs score charts
 - Added dropdown menu and customizable chart
 
+amandaT -- 2025-04-23 00:30
+- HMTL / browser continuity
+  - got rid of white background and border for p tags on firefox
+
 HOME STRETCH CHECKLIST:
 ------------------------------------
 * HTML - login form, buttons :: DNL
