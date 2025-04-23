@@ -21,6 +21,10 @@
 
     <!-- css -->
     <link rel="stylesheet" href="/static/css/style.css">
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
   </head>
 
   <body>
@@ -63,6 +67,209 @@
       {% endif %}
     {% endwith %}
     <!------>
+    
+    <div class="container mt-5">
+      <h3>Graphs</h3>
+      <canvas id="attendanceChart" width="400" height="200"></canvas>
+      <canvas id="sleepChart" width="400" height="200"></canvas>
+    </div>
+    
+    <!-- Attendance and Sleep Charts -->
+    <script>
+      async function fetchData(field) {
+        const res = await fetch(`/api/student_data/${field}`);
+        return await res.json();
+      }
+    
+      async function renderASChart() {
+        const xData = await fetchData("attendance");
+        const yData = await fetchData("score");
+    
+        const scatterData = xData.map((x, i) => ({ x, y: yData[i] }));
+    
+        const ctx = document.getElementById("attendanceChart").getContext("2d");
+    
+        new Chart(ctx, {
+          type: 'scatter',
+          data: {
+            datasets: [{
+              label: 'Attendance vs Score',
+              data: scatterData,
+              backgroundColor: 'rgb(75, 192, 192)',
+              borderColor: 'rgb(75, 192, 192)',
+
+            }]
+          },
+          options: {
+            responsive: true,
+            plugins: {
+              title: {
+                display: true,
+                text: 'Student Performance: Attendance vs Score'
+              }
+            },
+            scales: {
+              x: {
+                title: {
+                  display: true,
+                  text: 'Attendance'
+                }
+              },
+              y: {
+                title: {
+                  display: true,
+                  text: 'Score'
+                }
+              }
+            }
+          }
+        });
+      }
+      async function renderSleepChart() {
+        const xData = await fetchData("sleep_hours");
+        const yData = await fetchData("score");
+    
+        const scatterData = xData.map((x, i) => ({ x, y: yData[i] }));
+    
+        const ctx = document.getElementById("sleepChart").getContext("2d");
+    
+        new Chart(ctx, {
+          type: 'scatter',
+          data: {
+            datasets: [{
+              label: 'Sleep Hours vs Score',
+              data: scatterData,
+              backgroundColor: 'rgb(153, 102, 255)',
+              borderColor: 'rgb(153, 102, 255)',
+            }]
+          },
+          options: {
+            responsive: true,
+            plugins: {
+              title: {
+                display: true,
+                text: 'Student Performance: Sleep Hours vs Score'
+              }
+            },
+            scales: {
+              x: {
+                title: {
+                  display: true,
+                  text: 'Sleep Hours'
+                }
+              },
+              y: {
+                title: {
+                  display: true,
+                  text: 'Score'
+                }
+              }
+            }
+          }
+        });
+      }
+
+      renderASChart();
+      renderSleepChart();
+    </script>
+    
+    <!-- Dropdown -->
+    <div class="container mt-5">
+      <h3>Compare Data</h3>
+      <div class="row mb-3">
+        <div class="col">
+          <label for="xSelect">X Axis:</label>
+          <select id="xSelect" class="form-control">
+            <option value="attendance">Attendance</option>
+            <option value="sleep_hours">Sleep Hours</option>
+            <option value="study_hours">Study Hours</option>
+            <option value="previous_score">Previous Score</option>
+            <option value="tutoring_sessions">Tutoring Sessions</option>
+            <option value="physical_activity">Physical Activity</option>
+          </select>
+        </div>
+        <div class="col">
+          <label for="ySelect">Y Axis:</label>
+          <select id="ySelect" class="form-control">
+            <option value="score">Score</option>
+            <option value="attendance">Attendance</option>
+            <option value="sleep_hours">Sleep Hours</option>
+            <option value="study_hours">Study Hours</option>
+            <option value="previous_score">Previous Score</option>
+            <option value="tutoring_sessions">Tutoring Sessions</option>
+            <option value="physical_activity">Physical Activity</option>
+          </select>
+        </div>
+      </div>
+    
+      <canvas id="dynamicChart" width="600" height="300"></canvas>
+    </div>
+    
+    <!-- Customizable Chart -->
+    <script>
+      let chartInstance;
+
+      async function fetchData(field) {
+        const res = await fetch(`/api/student_data/${field}`);
+        return await res.json();
+      }
+
+      async function updateChart(xField, yField) {
+        const xData = await fetchData(xField);  // fetch first
+        const yData = await fetchData(yField);  // then fetch second
+
+        const chartData = xData.map((x, i) => ({ x, y: yData[i] }));
+
+        const ctx = document.getElementById("dynamicChart").getContext("2d");
+
+        if (chartInstance) chartInstance.destroy(); // destroy previous chart
+
+        chartInstance = new Chart(ctx, {
+          type: 'scatter',
+          data: {
+            datasets: [{
+              label: `${xField.replace("_", " ")} vs ${yField.replace("_", " ")}`,
+              data: chartData,
+              backgroundColor: 'rgb(255, 99, 132)',
+              borderColor: 'rgb(255, 99, 132)',
+            }]
+          },
+          options: {
+            responsive: true,
+            plugins: {
+            },
+            scales: {
+              x: {
+                title: {
+                  display: true,
+                  text: xField.replace("_", " ")
+                }
+              },
+              y: {
+                title: {
+                  display: true,
+                  text: yField.replace("_", " ")
+                }
+              }
+            }
+          }
+        });
+      }
+      document.getElementById("xSelect").addEventListener("change", () => {
+        const x = document.getElementById("xSelect").value;
+        const y = document.getElementById("ySelect").value;
+        updateChart(x, y);
+      });
+
+      document.getElementById("ySelect").addEventListener("change", () => {
+        const x = document.getElementById("xSelect").value;
+        const y = document.getElementById("ySelect").value;
+        updateChart(x, y);
+      });
+
+      updateChart("attendance", "score");
+    </script>
+
 
     <!-- footer -->
     <footer class="footer">
