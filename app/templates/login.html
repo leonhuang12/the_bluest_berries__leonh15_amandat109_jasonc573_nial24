@@ -28,8 +28,8 @@
     <div class="container-fluid">
       <nav class="navbar">
       <ul class="nav">
-        <li class="nav-item"> <a class="nav-link" href="{{ url_for('home') }}"> Home</a> </li>
-        <li class="nav-item"> <a class="nav-link" href="{{ url_for('login') }}"> Log In </a> </li>
+        <li class="nav-item"> <a class="{{ 'active' if request.endpoint == 'home' else '' }}" href="{{ url_for('home') }}"> Home</a> </li>
+        <li class="nav-item"> <a class="{{ 'active' if request.endpoint == 'login' else '' }}" href="{{ url_for('login') }}"> Log In </a> </li>
       </ul>
       </nav>
     </div>
@@ -64,8 +64,8 @@
       <div class="login-forms">
         <h4> Log In </h4>
         <form action="/login" method="POST">
-          <input type="text" name="username" placeholder="Username"><br><br>
-          <input type="password" name="password" placeholder="Password"><br><br>
+          <input type="text" name="username" placeholder="Username" required><br><br>
+          <input type="password" name="password" placeholder="Password" required><br><br>
           <input type="submit" name="login" value="Login">
         </form>
       </div>
@@ -73,8 +73,8 @@
       <div class="login-forms">
         <h4> Sign Up </h4>
         <form action="/login" method="POST">
-            <input type="text" name="username" placeholder="Username"><br><br>
-            <input type="password" name="password" placeholder="Password"><br><br>
+            <input type="text" name="username" placeholder="Username" required><br><br>
+            <input type="password" name="password" placeholder="Password" required><br><br>
             <input type="password" name="confirm_pass" placeholder="Confirm Password"><br><br>
             <input type="submit" name="register" value="Register">
         </form>

@@ -7,6 +7,7 @@ Time Spent: [INSERT TIME HERE]
 '''
 
 from flask import Flask, flash, render_template, request, redirect, url_for, session, flash
+from db import *
 import pymongo
 import csv
 
@@ -29,13 +30,40 @@ def home():
         return redirect('/login')
     return render_template('index.html')
 
-@app.route('/login')
+# db.insert_user_data(user, pass)
+@app.route('/login', methods=['GET', 'POST'])
 def login():
-        # RETRIEVE USER AND PASS FROM LOGIN FORM
-        db.insert_user_data(user, pass)
-        else:
-            flash('form error')
+    if request.method == 'POST':
+        username = request.form.get('username')
+        password = request.form.get('password')
+        print(f"log me in plss: {username}, {password}")
+        
+        if 'login' in request.form:
+            user = user_collection.find_one({'username': username})
+            if user and verify_user_login(username, password):
+                session['username'] = username
+                flash('Login successful.')
+                return redirect('/')
+            else:
+                flash('Invalid username or password.')
+
+        elif 'register' in request.form:
+            confirm_pass = request.form.get('confirm_pass')
+            print(f"reg: {username}, {password}, {confirm_pass}")
+
+            if password != confirm_pass:
+                flash('Passwords do not match.')
+            else:
+                existing_user = user_collection.find_one({'username': username})
+                if existing_user:
+                    flash('Username already exists.')
+                else:
+                    insert_user_data(username, password)
+                    print(f"new user: {username}")
+                    flash('Registration successful.')
+
     return render_template('login.html')
+
 
 
 if __name__ == '__main__':

@@ -15,7 +15,7 @@ from pymongo.server_api import ServerApi
 uri = "mongodb+srv://jasonc573:Dragonace2010@blueberry.pjtpwgq.mongodb.net/?appName=Blueberry"
 
 # Create a new client and connect to the server
-client = MongoClient(uri, server_api=ServerApi('1'))
+client = MongoClient(uri, server_api=ServerApi('1'), ssl = True)
 
 # Send a ping to confirm a successful connection
 # try:

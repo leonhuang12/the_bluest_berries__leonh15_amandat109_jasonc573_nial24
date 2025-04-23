@@ -28,8 +28,8 @@
     <div class="container-fluid">
       <nav class="navbar">
       <ul class="nav">
-        <li class="nav-item"> <a class="nav-link" href="{{ url_for('home') }}"> Home</a> </li>
-        <li class="nav-item"> <a class="nav-link" href="{{ url_for('login') }}"> Log In </a> </li>
+        <li class="nav-item"> <a class="{{ 'active' if request.endpoint == 'home' else '' }}" href="{{ url_for('home') }}"> Home</a> </li>
+        <li class="nav-item"> <a class="{{ 'active' if request.endpoint == 'login' else '' }}" href="{{ url_for('login') }}"> Log In </a> </li>
       </ul>
       </nav>
     </div>
