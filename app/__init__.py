@@ -6,7 +6,7 @@ P04: Makers Makin' It, Act II -- The Seequel
 Time Spent: [INSERT TIME HERE]
 '''
 
-from flask import Flask, flash, render_template, request, redirect, url_for, session, flash
+from flask import Flask, flash, render_template, request, redirect, url_for, session, flash, jsonify
 from db import *
 import pymongo
 import csv
@@ -63,6 +63,13 @@ def login():
 
     return render_template('login.html')
 
+@app.route("/api/student_data/<data_type>")
+def get_student_data(data_type):
+    try:
+        data = retrieve_student_data(data_type)
+        return jsonify(data)
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
 
 
 if __name__ == '__main__':
