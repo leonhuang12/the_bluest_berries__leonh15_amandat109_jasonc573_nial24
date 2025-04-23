@@ -13,6 +13,8 @@ div.container{
 div.card{
   margin-right: 15%;
   margin-left: 15%;
+  background-color: transparent;
+  border: none;
 }
 
 h1 {
