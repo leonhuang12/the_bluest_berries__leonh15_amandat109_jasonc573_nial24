@@ -122,6 +122,10 @@ amandaT -- 2025-04-22 20:37
   - major additions include: pymongo, bcrypt
 - fixed devlog dating errors
 
+leonH -- 2025-04-22 23:25
+- Added attendance vs score and sleep vs score charts
+- Added dropdown menu and customizable chart
+
 HOME STRETCH CHECKLIST:
 ------------------------------------
 * HTML - login form, buttons :: DNL
